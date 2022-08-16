@@ -27,13 +27,25 @@ document.getElementById('Withdraw-btn').addEventListener('click', function(){
     
     const totalWithdraw = document.getElementById('total-withdraw');
     const totalWithdrawAmount = parseFloat(totalWithdraw.innerText);
-    const withdrawBalance = totalWithdrawAmount + withdraw;
-    totalWithdraw.innerText = withdrawBalance.toFixed(2);
+    // const withdrawBalance = totalWithdrawAmount + withdraw;
+    // totalWithdraw.innerText = withdrawBalance.toFixed(2);
     withdrawField.value = '';
 
     //main balance -:
     const totalBalance = document.getElementById('total-balance');
-    const totalBalanceAmount = parseFloat(totalBalance.innerText) - withdraw;
+    const totalBalanceAmount = parseFloat(totalBalance.innerText);
+
+    if(withdraw > totalBalanceAmount){
+        alert('Please enter valid number');
+        return;
+    }
+
+    const withdrawBalance = totalWithdrawAmount + withdraw;
+    totalWithdraw.innerText = withdrawBalance.toFixed(2);
+
+    const balanceAmount = totalBalanceAmount - withdraw;
     //total balance set:
-    totalBalance.innerText = totalBalanceAmount.toFixed(2);    
+    totalBalance.innerText = balanceAmount.toFixed(2);  
+    
+    
 })

@@ -11,5 +11,6 @@ document.getElementById('login-btn').addEventListener('click', function () {
     else {
         window.location.href = alert('Please enter valid email and password')
     };
-})
+
+});
 
