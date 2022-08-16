@@ -11,6 +11,7 @@ document.getElementById('login-btn').addEventListener('click', function () {
     else {
         alert('Please enter valid email and password')
     };
-
+    emailField.value = '';
+    passwordField.value = '';
 });
 

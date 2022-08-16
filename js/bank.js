@@ -1,10 +1,10 @@
 //Deposit and balance Field:
-document.getElementById('deposit-btn').addEventListener('click', function(){
+document.getElementById('deposit-btn').addEventListener('click', function () {
     const depositInput = document.getElementById('inp-deposit');
     const depositAmount = parseFloat(depositInput.value);
 
     // console.log(typeof(depositAmount));
-    
+
     //previous deposit and new deposit Sum:
     const totalDeposit = document.getElementById('total-deposit');
     const depositAmount2 = parseFloat(totalDeposit.innerText);
@@ -17,14 +17,14 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     const totalBalance = document.getElementById('total-balance');
     const totalBalanceAmount = parseFloat(totalBalance.innerText) + depositAmount;
     //total balance set:
-    totalBalance.innerText = totalBalanceAmount.toFixed(2);    
+    totalBalance.innerText = totalBalanceAmount.toFixed(2);
 });
 
 // Withdraw and main balance:
-document.getElementById('Withdraw-btn').addEventListener('click', function(){
+document.getElementById('Withdraw-btn').addEventListener('click', function () {
     const withdrawField = document.getElementById('inp-withdraw');
     const withdraw = parseFloat(withdrawField.value);
-    
+
     const totalWithdraw = document.getElementById('total-withdraw');
     const totalWithdrawAmount = parseFloat(totalWithdraw.innerText);
     // const withdrawBalance = totalWithdrawAmount + withdraw;
@@ -35,7 +35,7 @@ document.getElementById('Withdraw-btn').addEventListener('click', function(){
     const totalBalance = document.getElementById('total-balance');
     const totalBalanceAmount = parseFloat(totalBalance.innerText);
 
-    if(withdraw > totalBalanceAmount){
+    if (withdraw > totalBalanceAmount) {
         alert('Please enter valid number');
         return;
     }
@@ -45,7 +45,7 @@ document.getElementById('Withdraw-btn').addEventListener('click', function(){
 
     const balanceAmount = totalBalanceAmount - withdraw;
     //total balance set:
-    totalBalance.innerText = balanceAmount.toFixed(2);  
-    
-    
+    totalBalance.innerText = balanceAmount.toFixed(2);
+
+
 })
