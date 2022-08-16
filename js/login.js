@@ -9,7 +9,7 @@ document.getElementById('login-btn').addEventListener('click', function () {
         window.location.href = 'bank.html';
     }
     else {
-        window.location.href = alert('Please enter valid email and password')
+        alert('Please enter valid email and password')
     };
 
 });
